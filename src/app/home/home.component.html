@@ -1,0 +1,33 @@
+<div class="row">
+    <div class="col-2"></div>
+    <div class="col-8">
+        <div class="form-group" style="margin-top: 5%;">
+            <div class="row">
+                <div class="col-10"><input type="date" class="form-control" [(ngModel)]="filterDate">
+                </div>
+                <div class="col-2"><button type="button" class="btn btn-md btn-info" (click)="search()">Search</button>
+                </div>
+            </div>
+        </div>
+        <div class="card card-main" *ngFor="let data of details">
+            <div class="card-body">
+                <div class="row">
+                    <div class="col-4">
+                        <p>First Car:{{data.vehicle_type_code1}}</p>
+                        <p>Second Car: {{data.vehicle_type_code2}}</p>
+                    </div>
+                    <div class="col-4">
+                        <p>{{data.crash_date | date: 'shortDate' }}</p>
+                    </div>
+                    <div class="col-2">
+                        <p>{{data.crash_time }}</p>
+                    </div>
+                    <div class="col-2">
+                        <button class="btn btn-primary" (click)="seeMore(data)">See More</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="col-2"></div>
+</div>

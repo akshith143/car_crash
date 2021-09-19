@@ -1,0 +1,46 @@
+<div class="row">
+    <div class="card">
+        <div class="card-head btn-primary">
+            <div class="row">
+                <div class="col-6">
+                    {{data.vehicle_type_code1}}
+                </div>
+                <div class="col-6">
+                    {{data.crash_date | date: 'shortDate'}}
+                </div>
+            </div>
+        </div>
+        <div class="card-body ">
+            <table>
+                <thead>
+                    <tr>
+                        <th width='10%'>Collision Id</th>
+                        <th width='10%'>Cyclist Injured</th>
+                        <th width='10%'>Cyclist Killed</th>
+                        <th width='10%'>Motorist Injured</th>
+                        <th width='10%'>Motorist Killed</th>
+                        <th width='10%'>Pedestrians Injured</th>
+                        <th width='10%'>Pedestrians Killed</th>
+                        <th width='10%'>Persons Injured</th>
+                        <th width='10%'>Persons Killed</th>
+                        <th width='10%'>Street Name</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>{{data.collision_id}}</td>
+                        <td>{{data.number_of_cyclist_injured}}</td>
+                        <td>{{data.number_of_cyclist_killed}}</td>
+                        <td>{{data.number_of_motorist_injured}}</td>
+                        <td>{{data.number_of_motorist_killed}}</td>
+                        <td>{{data.number_of_pedestrians_injured}}</td>
+                        <td>{{data.number_of_pedestrians_killed}}</td>
+                        <td>{{data.number_of_persons_injured}}</td>
+                        <td>{{data.number_of_persons_killed}}</td>
+                        <td>{{data.on_street_name}}</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>
